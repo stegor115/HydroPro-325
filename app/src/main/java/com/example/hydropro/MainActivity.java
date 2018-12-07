@@ -5,11 +5,16 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Button;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    private int refillCounter = 0;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -35,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //private int refillCounter=0;
+        final Button button = findViewById(R.id.refill);
+        button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                refillCounter++;
+                EditText textView = (EditText) MainActivity.this.findViewById(R.id.counterLabel);
+                textView.setText(String.valueOf(refillCounter));
+            }
+        });
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
