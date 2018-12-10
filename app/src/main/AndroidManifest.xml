@@ -18,6 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MilestoneActivity"
+            android:label="@string/title_activity_milestone" />
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting" />
     </application>
 
 </manifest>

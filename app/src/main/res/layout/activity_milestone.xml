@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MilestoneActivity">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+    <TableLayout
+        android:id="@+id/table_milestones"
+        android:layout_width="363dp"
+        android:layout_height="312dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelMilestone1"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="100 plastic bottles saved!" />
+
+            <TextView
+                android:id="@+id/labelShare1"
+                android:layout_column="2"
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Share!" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelMilestone2"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="50 plastic bottles saved!" />
+
+            <TextView
+                android:id="@+id/labelShare2"
+                android:layout_column="2"
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Share!" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelMilestone3"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Added new reusable water bottle!" />
+
+            <TextView
+                android:id="@+id/labelShare3"
+                android:layout_column="2"
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Share!" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/labelMilestone4"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Opened HydroPro for the first time!" />
+
+            <TextView
+                android:id="@+id/labelShare4"
+                android:layout_column="2"
+                android:gravity="end"
+                android:padding="3dip"
+                android:text="Share!" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/labelMilestones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Milestones"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/table_milestones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
