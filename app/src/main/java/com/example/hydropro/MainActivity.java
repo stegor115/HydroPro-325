@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //private int refillCounter=0;
-        final Button button = findViewById(R.id.refill);
+        final ImageButton button = findViewById(R.id.refill);
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 refillCounter++;
