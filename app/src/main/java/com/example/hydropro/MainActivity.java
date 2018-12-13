@@ -8,9 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -46,8 +47,11 @@ public class MainActivity extends AppCompatActivity {
         final Button bottle_default = findViewById(R.id.bottle_default);
         final Button bottle_big_default = findViewById(R.id.bottle_big_default);
 
+        final Animation refillAnim = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
+                v.startAnimation(refillAnim);
                 refillCounter += increment;
                 EditText textView = (EditText) MainActivity.this.findViewById(R.id.counterLabel);
                 textView.setText(String.valueOf(refillCounter));
