@@ -6,11 +6,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-public class SettingActivity extends AppCompatActivity {
+public class NotificationActivity extends AppCompatActivity {
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -20,12 +18,13 @@ public class SettingActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    startActivity(new Intent(SettingActivity.this, MainActivity.class));
+                    startActivity(new Intent(NotificationActivity.this, MainActivity.class));
                     return true;
                 case R.id.navigation_milestones:
-                    startActivity(new Intent(SettingActivity.this, MilestoneActivity.class));
+                    startActivity(new Intent(NotificationActivity.this, MilestoneActivity.class));
                     return true;
                 case R.id.navigation_settings:
+                    startActivity(new Intent(NotificationActivity.this, SettingActivity.class));
                     return true;
             }
             return false;
@@ -35,16 +34,7 @@ public class SettingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
-
-        final Button bNotifications = findViewById(R.id.buttonNotification);
-
-        bNotifications.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SettingActivity.this, NotificationActivity.class));
-            }
-        });
+        setContentView(R.layout.activity_notification);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setSelectedItemId(R.id.navigation_settings);

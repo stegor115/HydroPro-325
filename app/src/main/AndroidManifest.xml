@@ -24,6 +24,9 @@
         <activity
             android:name=".SettingActivity"
             android:label="@string/title_activity_setting" />
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/title_activity_notification"></activity>
     </application>
 
 </manifest>
