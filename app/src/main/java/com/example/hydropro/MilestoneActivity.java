@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 public class MilestoneActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -19,15 +17,12 @@ public class MilestoneActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText("Home");
                     //Load MainActivity
                     startActivity(new Intent(MilestoneActivity.this, MainActivity.class));
                     return true;
                 case R.id.navigation_milestones:
-                    mTextMessage.setText("Milestones");
                     return true;
                 case R.id.navigation_settings:
-                    mTextMessage.setText("Settings");
                     startActivity(new Intent(MilestoneActivity.this, SettingActivity.class));
                     return true;
             }
@@ -40,8 +35,8 @@ public class MilestoneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_milestone);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setSelectedItemId(R.id.navigation_milestones);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 

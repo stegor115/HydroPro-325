@@ -14,8 +14,6 @@ import android.widget.ImageButton;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextView mTextMessage;
     private int refillCounter = 0;
     private int increment = 1; //Set to 1 by default
 
@@ -26,15 +24,12 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText("Home");
                     return true;
                 case R.id.navigation_milestones:
-                    mTextMessage.setText("Milestones");
                     //Load MilestoneActivity
                     startActivity(new Intent(MainActivity.this, MilestoneActivity.class));
                     return true;
                 case R.id.navigation_settings:
-                    mTextMessage.setText("Settings");
                     startActivity(new Intent(MainActivity.this, SettingActivity.class));
                     return true;
             }
@@ -76,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setSelectedItemId(R.id.navigation_home);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
