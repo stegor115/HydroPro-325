@@ -37,22 +37,27 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#91c6e0">
 
             <TextView
                 android:id="@+id/labelMilestone1"
+                android:layout_width="318dp"
+                android:layout_height="match_parent"
                 android:layout_column="1"
                 android:gravity="center"
                 android:padding="3dip"
                 android:text="100 plastic bottles saved!" />
 
-            <TextView
-                android:id="@+id/labelShare1"
-                android:layout_column="2"
-                android:gravity="end"
-                android:padding="3dip"
-                android:text="Share!" />
+            <ImageButton
+                android:id="@+id/shareButton1"
+                android:layout_width="45dp"
+                android:layout_height="52dp"
+                android:contentDescription="share milestone 1"
+                app:srcCompat="@android:drawable/ic_menu_set_as" />
         </TableRow>
+
+
 
         <TableRow
             android:layout_width="match_parent"
@@ -60,36 +65,40 @@
 
             <TextView
                 android:id="@+id/labelMilestone2"
+                android:layout_height="match_parent"
                 android:layout_column="1"
+                android:contentDescription="milestone 2"
                 android:gravity="center"
                 android:padding="3dip"
                 android:text="50 plastic bottles saved!" />
 
-            <TextView
-                android:id="@+id/labelShare2"
-                android:layout_column="2"
-                android:gravity="end"
-                android:padding="3dip"
-                android:text="Share!" />
+            <ImageButton
+                android:id="@+id/shareButton2"
+                android:layout_width="34dp"
+                android:layout_height="52dp"
+                android:contentDescription="share milestone 2"
+                app:srcCompat="@android:drawable/ic_menu_set_as" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#91c6e0">
 
             <TextView
                 android:id="@+id/labelMilestone3"
+                android:layout_height="match_parent"
                 android:layout_column="1"
                 android:gravity="center"
                 android:padding="3dip"
                 android:text="Added new reusable water bottle!" />
 
-            <TextView
-                android:id="@+id/labelShare3"
-                android:layout_column="2"
-                android:gravity="end"
-                android:padding="3dip"
-                android:text="Share!" />
+            <ImageButton
+                android:id="@+id/shareButton3"
+                android:layout_width="34dp"
+                android:layout_height="52dp"
+                android:contentDescription="share milestone 3"
+                app:srcCompat="@android:drawable/ic_menu_set_as" />
         </TableRow>
 
         <TableRow
@@ -98,17 +107,18 @@
 
             <TextView
                 android:id="@+id/labelMilestone4"
+                android:layout_height="match_parent"
                 android:layout_column="1"
                 android:gravity="center"
                 android:padding="3dip"
                 android:text="Opened HydroPro for the first time!" />
 
-            <TextView
-                android:id="@+id/labelShare4"
-                android:layout_column="2"
-                android:gravity="end"
-                android:padding="3dip"
-                android:text="Share!" />
+            <ImageButton
+                android:id="@+id/shareButton4"
+                android:layout_width="34dp"
+                android:layout_height="52dp"
+                android:contentDescription="share milestone 4"
+                app:srcCompat="@android:drawable/ic_menu_set_as" />
         </TableRow>
     </TableLayout>
 
